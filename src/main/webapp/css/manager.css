@@ -1,0 +1,275 @@
+.manager-container {
+    color: #000;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, Microsoft YaHei, SF Pro Display, Roboto, Noto, Arial, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    display: block;
+    background: #fff;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, .05);
+    padding: 8px 0;
+    top: 0px;
+}
+
+.manager-menu {
+    border: #00c4ff 0.5px solid;
+    border-radius: 10px;
+    height: 40px;
+    margin-left: 200px;
+    margin-top: 100px;
+    margin-right: 200px;
+    /*background: black;*/
+    display: flex;
+    /*color: #fffdf5;*/
+}
+
+.manager-menu div {
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
+.manager-menu div:hover {
+    color: #00c4ff;
+}
+
+.manager-list {
+    border: #00c4ff 0.3px solid;
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.manager-data-user {
+    color: #000;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, Microsoft YaHei, SF Pro Display, Roboto, Noto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ededed;
+    background: #fff;
+    height: 100px;
+    display: flex;
+}
+
+.manager-user-head {
+    width: 100px;
+}
+
+.manager-user-head img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: relative;
+    top: 21%;
+    left: 20%;
+    /*transform: translate(-50%, -50%);*/
+}
+
+.manager-user-mid {
+    width: 70%;
+}
+
+.manager-user-name {
+    position: relative;
+    top: 20px;
+    font-size: 14px;
+    /*font-family: PingFangSC-Regular, Microsoft YaHei, SF Pro Display, Roboto, Noto, Arial, sans-serif;*/
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: sub;
+    white-space: nowrap;
+    max-width: 400px;
+    color: #222226;
+    font-weight: 600;
+}
+
+.manager-user-brief {
+    font-size: 14px;
+    font-family: PingFangSC-Regular, Microsoft YaHei, SF Pro Display, Roboto, Noto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: sub;
+    white-space: nowrap;
+    max-width: 400px;
+    color: #999aaa;
+    font-weight: 400;
+    margin-top: 10px;
+    position: relative;
+    top: 30px;
+    /*right: 47px;*/
+}
+
+.manager-user-right {
+    /*border: black 1px solid;*/
+}
+.manager-user-right button{
+    margin-top: 35px;
+    margin-right: 20px;
+    border-radius: 10px;
+    border: 0.5px black;
+}
+.manager-user-right .delete{
+    background-color: red;
+    color: #fffdf5;
+}
+.manager-user-right .check{
+    background-color: #00c4ff;
+    color: #fffdf5;
+}
+.manager-user-right .check:hover{
+    background-color: #fffdf5;
+    color: #00c4ff;
+}
+.manager-user-right .delete:hover{
+    background-color: #fffdf5;
+    color: red;
+}
+
+.manager-data-item {
+    color: #000;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, Microsoft YaHei, SF Pro Display, Roboto, Noto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ededed;
+    background: #fff;
+}
+
+.manager-data-item-title {
+    color: #000;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, Microsoft YaHei, SF Pro Display, Roboto, Noto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 22px;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 95%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    position: relative;
+    left: 20px;
+    top: 5px;
+}
+
+.manager-data-item-content {
+    font-size: 14px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Microsoft YaHei', 'SF Pro Display', Roboto, Noto, Arial, 'PingFang SC', sans-serif;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    max-height: 48px;
+    -webkit-line-clamp: 2;
+    width: 80%;
+    height: 70%;
+    color: #999aaa;
+    max-width: 700px;
+    word-break: break-all;
+    position: relative;
+    left: 20px;
+    margin-top: 10px;
+    /*border: black 1px solid;*/
+}
+
+.manager-data-item-bottom {
+    font-size: 14px;
+    font-family: PingFangSC-Regular, Microsoft YaHei, SF Pro Display, Roboto, Noto, Arial, sans-serif;
+    color: #555666;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: 8px;
+    display: flex;
+    position: relative;
+    left: 20px;
+    width: 95%;
+}
+
+.manager-data-item-bottom img {
+    height: 24px;
+    width: 24px;
+}
+
+.manager-data-item-bottom-right {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    /*border: black 1px solid;*/
+}
+
+.manager-data-item-bottom-read span, .search-data-item-bottom-like span {
+    position: relative;
+    bottom: 5px;;
+}
+
+.manager-data-item-title:hover {
+    color: #00c4ff;
+}
+.manager-data-mid{
+    /*border: black 1px solid;*/
+    display: block;
+    height: 60px;
+}
+.manager-data-button{
+    position: relative;
+    left: 800px;
+    top: -30px;
+    /*border: black 1px solid;*/
+
+}
+.today:hover{
+    background-color: #44d01d;
+    color: #C0C0C0;
+}
+.manager-data-button button{
+    margin-right: 10px;
+    border-radius: 10px;
+    border: 0.5px black;
+}
+.manager-data-button .delete{
+    background-color: red;
+    color: #fffdf5;
+}
+.manager-data-button .check{
+    background-color: #00c4ff;
+    color: #fffdf5;
+}
+.manager-data-button .check:hover{
+    background-color: #fffdf5;
+    color: #00c4ff;
+}
+.manager-data-button .delete:hover{
+    background-color: #fffdf5;
+    color: red;
+}
+.check-Bolg,.read-Blog{
+    position: relative;
+    left: 50px;
+    margin-left: 10px;
+    background-color: #00c4ff;
+    color: #fffdf5;
+}
+.check-Bolg:hover,.read-Blog:hover{
+    background-color: #fffdf5;
+    color: #00c4ff;
+}

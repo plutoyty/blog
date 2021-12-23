@@ -1,0 +1,835 @@
+#mdView {
+    height: auto;
+    width: 1000px;
+    -webkit-text-size-adjust: 100%;
+    font-size: 14px;
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(0, 0, 0, .75);
+    font-variant-ligatures: common-ligatures;
+    line-height: 1.625;
+    tab-size: 4;
+    font-weight: normal;
+    box-sizing: inherit;
+    outline: 0;
+    margin-bottom: 40px;
+    float: right;
+    position: relative;
+    display: block;
+}
+
+#article_content {
+    background: #fefefe;
+}
+
+.main-father {
+    -webkit-text-size-adjust: 100%;
+    font-size: 14px;
+    position: relative;
+    top: 20px;
+    /*border: 1px black solid;*/
+    /*width: auto;*/
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+}
+
+.blog-body {
+    -webkit-text-size-adjust: 100%;
+    font-size: 14px;
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(0, 0, 0, .75);
+    font-variant-ligatures: common-ligatures;
+    line-height: 1.625;
+    tab-size: 4;
+    font-weight: normal;
+    box-sizing: inherit;
+    outline: 0;
+    margin-bottom: 40px;
+    float: right;
+    display: block;
+    width: 1000px;
+    position: relative;
+    right: 70px;
+
+}
+
+.blog-top {
+    height: 160px;
+    width: 100%;
+    background-color: #fefefe;
+    /*border: black 1px solid;*/
+}
+
+.blog-body-title {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    font-variant-ligatures: common-ligatures;
+    line-height: 1.625;
+    tab-size: 4;
+    outline: 0;
+    -webkit-box-sizing: border-box;
+    font-family: 'PingFang SC', 'Microsoft YaHei', 'SimHei', 'Arial', 'SimSun';
+    padding: 0;
+    font-size: 28px;
+    word-wrap: break-word;
+    color: #222226;
+    font-weight: 600;
+    margin: 0;
+    float: left;
+    position: relative;
+    top: 10px;
+    left: 22px;
+    word-break: break-all;
+}
+
+.blog-body-info {
+    -webkit-text-size-adjust: 100%;
+    font-size: 14px;
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(0, 0, 0, .75);
+    font-variant-ligatures: common-ligatures;
+    line-height: 1.625;
+    tab-size: 4;
+    outline: 0;
+    font-weight: normal;
+    -webkit-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 70px;
+    height: 75px;
+    left: 22px;
+    right: 22px;
+    background: #f8f8f8;
+    border-radius: 4px;
+    /*border:  black 1px solid;*/
+}
+
+.blog-body-bool {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    float: left;
+    color: #e33e33;
+    background: rgba(227, 62, 51, .1);
+}
+
+.blog-author-name {
+    position: relative;
+    top: 10px;
+    float: left;
+    /*display: inline;*/
+    /*border: black 1px solid;*/
+}
+
+.blog-body-time {
+    position: relative;
+    top: 10px;
+    float: left;
+    left: 20px;
+    /*display: inline;*/
+    /*border: black 1px solid;*/
+}
+
+.blog-body-info-top {
+    /*border: black 1px solid;*/
+    position: absolute;
+    height: 50%;
+    width: 94%;
+    right: 0px;
+}
+
+.blog-body-read {
+    position: relative;
+    float: left;
+    top: 10px;
+    left: 40px;
+    color: #999aaa;
+}
+
+.blog-footer {
+    width: 24px;
+    height: 24px;
+}
+
+.blog-body-info-bottom {
+    position: absolute;
+    right: 0px;
+    height: 50%;
+    width: 94%;
+    bottom: 0px;
+    /*border: black 1px solid;*/
+}
+
+.blog-body-info-sort span {
+    position: relative;
+    float: left;
+    top: 6px;
+    color: #999aaa;
+    /*border: black 1px solid;*/
+}
+
+.blog-body-info-tags {
+    -webkit-text-size-adjust: 100%;
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-variant-ligatures: common-ligatures;
+    tab-size: 4;
+    font-size: 14px;
+    line-height: 24px;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    -webkit-box-sizing: border-box;
+    display: inline-block;
+    color: #999aaa;
+    float: left;
+    position: relative;
+    top: 6px;
+}
+
+.blog-body-info-sort {
+    /*border: black 1px solid;*/
+    /*position: relative;*/
+    /*top: 10px;*/
+}
+
+.blog-body-info-sort-10 {
+    float: left;
+    /*border: black 1px solid;*/
+    position: relative;
+    top: 6px;
+    -webkit-text-size-adjust: 100%;
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-variant-ligatures: common-ligatures;
+    tab-size: 4;
+    margin: 0;
+    font-weight: normal;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-right: 8px;
+    padding: 3px 6px;
+    font-size: 12px;
+    background-color: #44d01d;
+    color: #fffdf5;
+    border: 1px solid #eaeaef;
+    height: 24px;
+    line-height: 17px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.blog-body-info-tags-10 {
+    position: relative;
+    left: 16px;
+    -webkit-text-size-adjust: 100%;
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-variant-ligatures: common-ligatures;
+    tab-size: 4;
+    margin: 0;
+    font-weight: normal;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-right: 8px;
+    padding: 3px 6px;
+    font-size: 12px;
+    background-color: #00c4ff;
+    color: #ffffff;
+    border: 1px solid #eaeaef;
+    height: 24px;
+    line-height: 17px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.blog-body-bottom {
+    -webkit-text-size-adjust: 100%;
+    font-size: 14px;
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(0, 0, 0, .75);
+    font-variant-ligatures: common-ligatures;
+    line-height: 1.625;
+    tab-size: 4;
+    outline: 0;
+    font-weight: normal;
+    -webkit-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /*display: flex;*/
+    position: relative;
+    bottom: 40px;
+}
+
+.blog-body-bottom-head {
+    -webkit-text-size-adjust: 100%;
+    font-size: 14px;
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-variant-ligatures: common-ligatures;
+    line-height: 1.625;
+    tab-size: 4;
+    font-weight: normal;
+    cursor: pointer;
+    color: #4f4f4f;
+    box-sizing: inherit;
+    outline: none;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #f5f6f7;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+
+.blog-body-bottom-user-01 {
+    -webkit-text-size-adjust: 100%;
+    font-size: 14px;
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(0, 0, 0, .75);
+    font-variant-ligatures: common-ligatures;
+    line-height: 1.625;
+    tab-size: 4;
+    outline: 0;
+    font-weight: normal;
+    -webkit-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    /*border: black 1px solid;*/
+}
+
+.blog-body-bottom-user-name {
+    -webkit-text-size-adjust: 100%;
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-variant-ligatures: common-ligatures;
+    tab-size: 4;
+    cursor: pointer;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    max-width: 160px;
+    height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+    color: #222226;
+    line-height: 24px;
+    margin-right: 8px;
+    float: left;
+    position: relative;
+    /*border: black 1px  solid;*/
+}
+
+.blog-body-bottom-user {
+    -webkit-text-size-adjust: 100%;
+    font-size: 14px;
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(0, 0, 0, .75);
+    font-variant-ligatures: common-ligatures;
+    line-height: 1.625;
+    tab-size: 4;
+    outline: 0;
+    font-weight: normal;
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 17px 24px;
+    height: 64px;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 -1px 8px 0 rgba(0, 0, 0, 0.06);
+    position: relative;
+    z-index: 10;
+    left: 0px;
+    bottom: 0px;
+    width: 1000px;
+    /*border: black 1px solid;*/
+}
+
+.blog-body-bottom-att a {
+    font-family: "SF Pro Display", Roboto, Noto, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    -webkit-box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    min-width: 60px;
+    height: 28px;
+    background: #fff;
+    border-radius: 16px;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    border: 1px solid #ccccd8;
+    color: #555666;
+    float: left;
+}
+
+.blog-body-bottom-att a:hover {
+    color: #00c4ff;
+}
+
+.toolbox-middle {
+    -webkit-text-size-adjust: 100%;
+    font-size: 14px;
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(0, 0, 0, .75);
+    font-variant-ligatures: common-ligatures;
+    line-height: 1.625;
+    tab-size: 4;
+    outline: 0;
+    font-weight: normal;
+    -webkit-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.toolbox-list {
+    -webkit-text-size-adjust: 100%;
+    font-size: 14px;
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(0, 0, 0, .75);
+    font-variant-ligatures: common-ligatures;
+    line-height: 1.625;
+    tab-size: 4;
+    outline: 0;
+    font-weight: normal;
+    -webkit-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+}
+
+#is-like {
+    -webkit-text-size-adjust: 100%;
+    font-size: 14px;
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(0, 0, 0, .75);
+    font-variant-ligatures: common-ligatures;
+    line-height: 1.625;
+    tab-size: 4;
+    outline: 0;
+    font-weight: normal;
+    list-style: none;
+    margin: 0;
+    padding: 0 8px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.tool-item-href {
+    -webkit-text-size-adjust: 100%;
+    font-size: 14px;
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(0, 0, 0, .75);
+    font-variant-ligatures: common-ligatures;
+    line-height: 1.625;
+    tab-size: 4;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    -webkit-box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: nowrap;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-left: 0;
+}
+
+#is-like-img, .animation-dom {
+    -webkit-text-size-adjust: 100%;
+    font-size: 14px;
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(0, 0, 0, .75);
+    font-variant-ligatures: common-ligatures;
+    line-height: 1.625;
+    tab-size: 4;
+    list-style: none;
+    font-weight: normal;
+    cursor: pointer;
+    box-sizing: inherit;
+    border: 0;
+    outline: none;
+    border-style: none;
+    margin-right: 4px;
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.is-collection {
+    -webkit-text-size-adjust: 100%;
+    font-size: 14px;
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(0, 0, 0, .75);
+    font-variant-ligatures: common-ligatures;
+    line-height: 1.625;
+    tab-size: 4;
+    outline: 0;
+    font-weight: normal;
+    list-style: none;
+    margin: 0;
+    padding: 0 8px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#tool-item-href {
+    -webkit-text-size-adjust: 100%;
+    font-size: 14px;
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-variant-ligatures: common-ligatures;
+    line-height: 1.625;
+    tab-size: 4;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    -webkit-box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: #4f4f4f;
+    display: flex;
+    flex-wrap: nowrap;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+#is-collection-img {
+    -webkit-text-size-adjust: 100%;
+    font-size: 14px;
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-variant-ligatures: common-ligatures;
+    line-height: 1.625;
+    tab-size: 4;
+    list-style: none;
+    font-weight: normal;
+    cursor: pointer;
+    color: #4f4f4f;
+    box-sizing: inherit;
+    border: 0;
+    outline: none;
+    border-style: none;
+    margin-right: 4px;
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.blog-user {
+    float: left;
+    width: 300px;
+    left: 70px;
+    height: 200px;
+    position: relative;
+    font-family: "SF Pro Display", Roboto, Noto, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-size: 14px;
+    line-height: 1.57142857;
+    color: #333;
+    outline: 0;
+    font-weight: normal;
+    -webkit-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+    padding-bottom: 10px;
+}
+
+.blog-user-head img {
+    font-family: "SF Pro Display", Roboto, Noto, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-size: 14px;
+    line-height: 1.57142857;
+    -webkit-box-direction: normal !important;
+    font-weight: normal;
+    color: #555666;
+    cursor: pointer;
+    box-sizing: inherit;
+    border: 0;
+    outline: none;
+    display: block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.blog-user-name {
+    font-family: "SF Pro Display", Roboto, Noto, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-size: 14px;
+    line-height: 1.57142857;
+    -webkit-box-direction: normal !important;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    -webkit-box-sizing: border-box;
+    outline: none;
+    color: #555666;
+    cursor: pointer;
+    margin-right: 6px;
+    overflow: hidden;
+    white-space: normal;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    width: 100px;
+    position: relative;
+    left: 90px;
+    bottom: 15px;
+    /*border: black 1px solid;*/
+}
+
+.user-send {
+    border: #b6aeae 0.5px solid;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    position: relative;
+    top: 40px;
+    float: left;
+    left: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.user-send span, .user-ass span {
+    font-size: 14px;
+
+}
+
+.user-ass {
+    border: #b6aeae 0.5px solid;
+    border-radius: 10px;
+    width: 100px;
+    position: relative;
+    top: 40px;
+    height: 30px;
+    float: right;
+    right: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.blog-user a:hover {
+    color: #00c4ff;
+}
+
+.blog-comment {
+    width: 100%;
+    background: #fff;
+    height: auto;
+    position: relative;
+    bottom: 30px;
+    /*border: black 1px solid;*/
+}
+
+.blog-comment-write-10 {
+    /*border: black 1px solid;*/
+    font-family: "SF Pro Display", Roboto, Noto, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-size: 14px;
+    line-height: 1.57142857;
+    color: #333;
+    outline: 0;
+    font-weight: normal;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    display: flex !important;
+    padding: 16px 24px 8px;
+}
+
+.blog-comment-write-10 img {
+    font-family: "SF Pro Display", Roboto, Noto, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-size: 14px;
+    line-height: 1.57142857;
+    font-weight: normal;
+    cursor: pointer;
+    color: #4f4f4f;
+    box-sizing: inherit;
+    outline: none;
+    margin-top: 2px;
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+}
+
+.blog-comment-write-10 textarea {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-appearance: none;
+    touch-action: manipulation;
+    font-family: inherit;
+    margin: 0;
+    resize: none;
+    font-size: 12px;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #f4f5f7;
+    border: 1px solid #e5e9ef;
+    overflow: auto;
+    border-radius: 4px;
+    color: #555;
+    width: 100%;
+    height: 65px;
+    transition: 0s;
+    padding: 5px 10px;
+    line-height: normal;
+    outline: none;
+}
+
+.blog-comment-write-10 button {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    touch-action: manipulation;
+    font-family: inherit;
+    line-height: inherit;
+    overflow: visible;
+    text-transform: none;
+    margin: 0;
+    -webkit-appearance: button;
+    box-sizing: border-box;
+    width: 70px;
+    height: 64px;
+    top: 0;
+    padding: 4px 15px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    min-width: 60px;
+    vertical-align: top;
+    cursor: pointer;
+    background-color: #00a1d6;
+    border: 1px solid #00a1d6;
+    transition: 0.1s;
+    user-select: none;
+    outline: none;
+}
+
+.blog-comment-item {
+    display: flex;
+    /*border: black 1px solid;*/
+    border-bottom: #C0C0C0 0.5px solid;
+}
+
+.blog-comment-item-name, .blog-comment-item-content {
+    /*border: black 1px solid;*/
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.blog-comment-item img {
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+    border-radius: 50px;
+    margin-left: 26px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.blog-comment-item-name {
+    margin-top: 10px;
+    -webkit-text-size-adjust: 100%;
+    font-size: 14px;
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-variant-ligatures: common-ligatures;
+    tab-size: 4;
+    -webkit-box-direction: normal;
+    line-height: 22px;
+    word-wrap: break-word;
+    font-weight: normal;
+    -webkit-box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: #4f4f4f;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.blog-comment-write {
+    border-bottom: #C0C0C0 solid 0.5px;
+}
+
+.blog-comment-item-content{
+    margin-top: 10px;
+    -webkit-text-size-adjust: 100%;
+    font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-variant-ligatures: common-ligatures;
+    tab-size: 4;
+    list-style: none;
+    -webkit-box-direction: normal;
+    line-height: 22px;
+    word-wrap: break-word;
+    font-weight: normal;
+    -webkit-box-sizing: border-box;
+    font-size: 14px;
+    margin-left: 0;
+    vertical-align: top;
+    color: #222226;
+    word-break: break-all;
+}

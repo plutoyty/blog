@@ -1,0 +1,145 @@
+#head-top{
+    position: relative;
+    width: 98%;
+    height: 80px;
+}
+#title{
+    position: absolute;
+    float: left;
+    top: 40%;
+    left: 20px;
+    border-radius: 10px;
+
+}
+.title-right{
+    position: absolute;
+    right: 0px;
+}
+.save-article,.save-drafts{
+    border-radius: 10px;
+    border: #00c4ff 1px solid;
+}
+.save-drafts{
+    color: #00c4ff;
+    position: absolute;
+    height: 40px;
+    right: 220px;
+    width: 100px;
+    top: 32px;
+}
+.save-article{
+    background-color: #00c4ff;
+    position: absolute;
+    height: 40px;
+    width: 100px;
+    right: 100px;
+    top: 32px;
+}
+.title{
+    position: absolute;
+    height: 40px;
+    width: 1000px;
+    border-radius: 20px;
+    /* font-size: 16px; */
+    font-size: 18px;
+    line-height: 24px;
+    background-color: #fff;
+    border: #857979 0.5px solid;
+}
+.con-1,.tags{
+    font-family: "SF Pro Display", Roboto, Noto, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-size: 20px;
+}
+.con-1{
+    position: relative;
+    left: 20px;
+}
+.con-2{
+    position: relative;
+    left: 120px;
+    bottom: 26px;
+}
+.con-2 span{
+    position: relative;
+    bottom: 4px;
+}
+.radio{
+    /*margin-top: 20px;*/
+    /*color: black;*/
+    width:20px;
+    height: 20px;
+}
+.tag,.tags,.text-sort{color: #615b53;
+}
+.tags{
+    /*border: black solid 1px;*/
+    width: 80%;
+    height: 50px;
+    bottom: 56px;
+    position: relative;
+    left: 250px;
+}
+.con-4 input{
+    position: relative;
+    left: 58px;
+    bottom: 25px;
+    width: 60px;
+    border:#c1c1c1 1px solid;
+}
+#new{
+    position: relative;
+    /*bottom: 48px;*/
+    /*left: 150px;*/
+    left: 60px;
+    bottom: 24px;
+    border-radius: 5px;
+    background-color: #C0C0C0;
+}
+.cls_select_span {
+    position:absolute;
+    border:1pt solid #c1c1c1;
+    overflow:hidden;
+    width:188px;
+    height:19px;
+    clip:rect(-1px 190px 190px 170px);
+}
+.cls_input_span {
+    position:absolute;
+    border-top:1pt solid #c1c1c1;
+    border-left:1pt solid #c1c1c1;
+    border-bottom:1pt solid #c1c1c1;
+    width:170px;
+    height:20px;
+    border-radius: 5px;
+}
+.cls_option_defined {
+    color:#c2c2c2;
+}
+.cls_select {
+    width:190px;
+    height:20px;
+    margin:-2px;
+}
+.cls_input {
+    width:170px;
+    height:15px;
+    border:0pt;
+}
+.text-sort{
+    font-size: 20px;
+}
+.sort{
+    position: relative;
+    bottom: 50px;
+    left: 20px;
+}
+
+.sort-in{
+    position: relative;
+    left: 105px;
+    bottom: 23px;
+}
+
+#id_input{
+    height: 20px;
+}

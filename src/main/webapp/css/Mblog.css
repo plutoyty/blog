@@ -1,0 +1,251 @@
+.blog-view-container {
+    background: #fff;
+    width: 80%;
+    height: auto;
+    position: relative;
+    top: 10px;
+    left: 10%;
+}
+
+body {
+    background: #f5f6f7;
+}
+
+.blog-search {
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    font-family: PingFang SC, Hiragino Sans GB, Arial, Microsoft YaHei, Verdana, Roboto, Noto, Helvetica Neue, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    color: #2c3e50;
+    list-style: none;
+    text-align: start;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 8px;
+    padding-left: 0;
+    font-size: 14px;
+    /*border: black 1px solid;*/
+    position: relative;
+    left: 30px;
+    top: 20px;
+    margin-left: auto;
+}
+
+.blog-search-year, .blog-search-month {
+    width: 50px;
+}
+
+.blog-search-original {
+    width: 70px;
+    height: 25px;
+}
+
+.blog-search-sort option {
+    font-family: PingFang SC, Hiragino Sans GB, Arial, Microsoft YaHei, Verdana, Roboto, Noto, Helvetica Neue, sans-serif !important;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.q1022 {
+    /*background: #fff;*/
+    /*position: relative;*/
+    /*top: 20px;*/
+    /*left: 20px;*/
+    /*right: 20px;*/
+    /*border: black 1px solid;*/
+    -webkit-text-size-adjust: 100%;
+    font-family: PingFang SC,Hiragino Sans GB,Arial,Microsoft YaHei,Verdana,Roboto,Noto,Helvetica Neue,sans-serif!important;
+    -webkit-font-smoothing: antialiased;
+    color: #2c3e50;
+    -webkit-box-direction: normal;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.blog-search-sort {
+    width: 90px;
+}
+
+#blog-search-MyBlog {
+    border: #00c4ff 1px solid;
+    color: #00c4ff;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+#blog-search-MyBlog:hover {
+    color: #fff3e7;
+    background: #00c4ff;
+}
+
+.form-search input {
+    font-size: 14px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.blog-MyBlog-list {
+    background: #fff;
+    position: relative;
+    top: 20px;
+    /*border: black 1px solid;*/
+}
+
+.blog-MyBlog-list-item {
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    font-family: PingFang SC, Hiragino Sans GB, Arial, Microsoft YaHei, Verdana, Roboto, Noto, Helvetica Neue, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    color: #2c3e50;
+    list-style: none;
+    text-align: start;
+    margin: 0;
+    box-sizing: border-box;
+    /*display: flex;*/
+    border-bottom: 1px dotted #ddd;
+    padding: 1rem 0 1rem 0;
+    height: 130px;
+    width: 100%;
+    /*border: black 1px solid;*/
+}
+
+.blog-MyBlog-list-item-title {
+    -webkit-tap-highlight-color: transparent;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: normal;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    list-style: none;
+    text-align: start;
+    -webkit-box-direction: normal;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: PingFang SC, Hiragino Sans GB, Arial, Microsoft YaHei, Verdana, Roboto, Noto, Helvetica Neue, sans-serif !important;
+    font-size: 16px;
+    color: #555666;
+    margin-bottom: 16px;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    width: 100%;
+    position: relative;
+    left: 30px;
+    /*border: black 1px solid;*/
+}
+
+.blog-MyBlog-list-item-data {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    list-style: none;
+    color: #999;
+    font-size: 14px;
+    -webkit-box-direction: normal;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: PingFang SC, Hiragino Sans GB, Arial, Microsoft YaHei, Verdana, Roboto, Noto, Helvetica Neue, sans-serif !important;
+    min-width: 142px;
+    text-align: right;
+    position: relative;
+    bottom: 46px;
+    right: 30px;
+    /*border: black 1px solid;*/
+}
+
+.blog-MyBlog-list-item-or-father {
+    width: 100%;
+    height: 20px;
+    -webkit-text-size-adjust: 100%;
+    font-family: PingFang SC, Hiragino Sans GB, Arial, Microsoft YaHei, Verdana, Roboto, Noto, Helvetica Neue, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    list-style: none;
+    text-align: start;
+    color: #999;
+    -webkit-box-direction: normal;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    font-size: 12px;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    bottom: 20px;
+    /*border: black 1px solid;*/
+}
+
+.blog-MyBlog-list-item-or {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    list-style: none;
+    text-align: start;
+    -webkit-box-direction: normal;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: PingFang SC, Hiragino Sans GB, Arial, Microsoft YaHei, Verdana, Roboto, Noto, Helvetica Neue, sans-serif !important;
+    height: 18px;
+    border-radius: 2px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 32px;
+    margin-right: 8px;
+    color: #fc5531;
+    background: #fff5f2;
+    position: relative;
+    left: 30px;
+    /*border: black 1px solid;*/
+}
+
+.blog-MyBlog-list-item-info {
+    display: flex;
+    position: relative;
+    bottom: 30px;
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-family: PingFang SC, Hiragino Sans GB, Arial, Microsoft YaHei, Verdana, Roboto, Noto, Helvetica Neue, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    list-style: none;
+    text-align: start;
+    color: #404040;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-top: 16px;
+    /*border: black 1px solid;*/
+}
+
+.blog-MyBlog-list-item-info-right {
+    display: flex;
+    float: right;
+    position: absolute;
+    right: 30px;
+}
+
+.blog-MyBlog-list-item-info a {
+    text-decoration: none;
+    color: black;
+}
+.blog-MyBlog-list-item-info-left{
+    display: flex;
+    position: absolute;
+    left: 30px;
+}

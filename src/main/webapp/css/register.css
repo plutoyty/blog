@@ -1,0 +1,92 @@
+
+span{
+    /*font-family: "Times New Roman", Times, serif;*/
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    right: 0px;
+    color: red;
+    font-size: 12px;
+
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #393b3d;
+}
+.form-control {
+    border: #C0C0C0;
+    border-radius: 5px;
+    width: 250px;
+    height:30px;
+}
+#code{
+    width: 160px;
+}
+#get{
+    width: 90px;
+    height: 30px;
+    position: absolute;
+    border-radius: 5px;
+    color: #3399ea;
+}
+#submit {
+    position: absolute;
+    background-color: #505050;
+    color: #C0C0C0 ;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    left: 76px;
+    top: 110%;
+}
+.m2 {
+    /*font: 400 14px/20px -apple-system,Noto Sans,Helvetica Neue,Helvetica,Nimbus Sans L,Arial,Liberation Sans,PingFang SC,Hiragino Sans GB,Noto Sans CJK SC,Source Han Sans SC,Source Han Sans CN,Microsoft YaHei,Wenquanyi Micro Hei,WenQuanYi Zen Hei,ST Heiti,SimHei,WenQuanYi Zen Hei Sharp,sans-serif;*/
+    text-align: center;
+    font-weight: 300;
+}
+h1[_ngcontent-wkl-c114] {
+    margin: 8px 0 24px;
+    text-align: center;
+    color: #393b3d;
+    font-weight: 300;
+}
+body {
+    background: no-repeat;
+    background: #fff3e7;
+    /*opacity: 0.5%;*/
+}
+
+.container {
+    border-radius: 25px;
+    background: #C0C0C0;
+    padding: 20px;
+    width: 400px;
+    height: 450px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.neizhi {
+    position: absolute;
+    /*background: #eeeeee;*/
+    width: 250px;
+    height: 200px;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.find{
+
+}
+#msgError{
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    bottom:-10px;
+    left: 0px;
+}
