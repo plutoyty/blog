@@ -5,12 +5,9 @@ import bean.Comment;
 import bean.Static;
 import dao.ArticleDao;
 import imp.ArticleDaoImp;
-import org.jetbrains.annotations.NotNull;
 import utils.ArticlesSearch;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -158,7 +155,7 @@ public class ArticleService {
         dao.delete(id);
     }
 
-    @NotNull
+
     public static List<Article> searchMyBlog(HttpServletRequest req) {
         String original = req.getParameter("original");
         String year = req.getParameter("year");
@@ -232,7 +229,7 @@ public class ArticleService {
         return list;
     }
 
-    @NotNull
+
     public static List<String> getTags(String s) {
         String a = s;
         List<String> list = new ArrayList<>();
@@ -253,7 +250,7 @@ public class ArticleService {
         return list;
     }
 
-    @NotNull
+
     public static List<Article> getSearchArticle(String details) {
         ArticlesSearch.createIndex();
         List<String> list_id = ArticlesSearch.searchData(details);
@@ -265,7 +262,7 @@ public class ArticleService {
         return list;
     }
 
-    @NotNull
+
     public static List<Article> getSearchArticle(String details, String query) {
         ArticlesSearch.createIndex();
         List<String> list_id = ArticlesSearch.searchData(details, query);

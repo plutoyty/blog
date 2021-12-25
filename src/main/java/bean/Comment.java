@@ -1,6 +1,6 @@
 package bean;
 
-public class Comment {
+public class    Comment {
 
     private User user;
     private String comment;

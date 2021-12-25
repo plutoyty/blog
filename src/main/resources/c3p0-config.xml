@@ -6,7 +6,7 @@
             <![CDATA[jdbc:mysql://127.0.0.1:3306/blog?useUnicode=true&characterEncoding=UTF-8]]>
         </property>
         <property name="user">root</property>
-        <property name="password">000</property>
+        <property name="password">123456</property>
         <!-- 初始化池大小 -->
         <property name="initialPoolSize">2</property>
         <!-- 最大空闲时间 -->

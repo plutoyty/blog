@@ -6,6 +6,7 @@ import bean.User;
 import dao.ArticleDao;
 import service.UserService;
 import utils.JdbcUtil;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -16,6 +17,7 @@ import java.util.List;
 public class ArticleDaoImp implements ArticleDao {
 
     private Connection con;
+
     private ArticleDaoImp() {
         try {
             con = JdbcUtil.getDataSource().getConnection();
@@ -25,7 +27,7 @@ public class ArticleDaoImp implements ArticleDao {
         }
     }
 
-    private  static ArticleDao instance;
+    private static ArticleDao instance;
 
     public static final ArticleDao getInstance() {
         if (instance == null) {
@@ -37,18 +39,19 @@ public class ArticleDaoImp implements ArticleDao {
         }
         return instance;
     }
+
     @Override
     public boolean savaArticle(Article article) {
         String sql = "insert into article (idx_title,idx_content,idx_time,idx_author,idx_tag,idx_sort,idx_original)values(?,?,?,?,?,?,?)";
         PreparedStatement ps = null;
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1,article.getTitle());
-            ps.setString(2,article.getContent());
-            ps.setString(3,article.getTime());
-            ps.setString(4,article.getAuthor());
-            ps.setString(5,article.getTag());
-            ps.setString(6,article.getSort());
+            ps.setString(1, article.getTitle());
+            ps.setString(2, article.getContent());
+            ps.setString(3, article.getTime());
+            ps.setString(4, article.getAuthor());
+            ps.setString(5, article.getTag());
+            ps.setString(6, article.getSort());
             ps.setString(7, String.valueOf(article.isOriginal()));
             boolean f = ps.execute();
 //            JdbcUtil.close(con,ps);
@@ -65,12 +68,12 @@ public class ArticleDaoImp implements ArticleDao {
         PreparedStatement ps = null;
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1,article.getTitle());
-            ps.setString(2,article.getContent());
-            ps.setString(3,article.getTime());
-            ps.setString(4,article.getAuthor());
-            ps.setString(5,article.getTag());
-            ps.setString(6,article.getSort());
+            ps.setString(1, article.getTitle());
+            ps.setString(2, article.getContent());
+            ps.setString(3, article.getTime());
+            ps.setString(4, article.getAuthor());
+            ps.setString(5, article.getTag());
+            ps.setString(6, article.getSort());
             ps.setString(7, String.valueOf(article.isOriginal()));
             boolean f = ps.execute();
 //            JdbcUtil.close(con,ps);
@@ -88,9 +91,9 @@ public class ArticleDaoImp implements ArticleDao {
         PreparedStatement ps = null;
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1,email);
+            ps.setString(1, email);
             ResultSet rs = ps.executeQuery();
-            while (rs.next()){
+            while (rs.next()) {
                 Article article = new Article();
                 article.setTime(rs.getString("idx_time"));
                 article.setTitle(rs.getString("idx_title"));
@@ -118,10 +121,10 @@ public class ArticleDaoImp implements ArticleDao {
         PreparedStatement ps = null;
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1,id);
+            ps.setString(1, id);
             ResultSet rs = ps.executeQuery();
             Article article = new Article();
-            while (rs.next()){
+            while (rs.next()) {
                 article.setTime(rs.getString("idx_time"));
                 article.setTitle(rs.getString("idx_title"));
                 article.setId(Integer.valueOf(rs.getString("pk_id")));
@@ -148,8 +151,8 @@ public class ArticleDaoImp implements ArticleDao {
         PreparedStatement ps;
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1,String.valueOf(1+article.getRead()));
-            ps.setString(2,id);
+            ps.setString(1, String.valueOf(1 + article.getRead()));
+            ps.setString(2, id);
             ps.execute();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -163,8 +166,8 @@ public class ArticleDaoImp implements ArticleDao {
         PreparedStatement ps;
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1,String.valueOf(1+article.getLike()));
-            ps.setString(2,id);
+            ps.setString(1, String.valueOf(1 + article.getLike()));
+            ps.setString(2, id);
             ps.execute();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -178,8 +181,8 @@ public class ArticleDaoImp implements ArticleDao {
         PreparedStatement ps;
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1,String.valueOf(article.getLike()-1));
-            ps.setString(2,id);
+            ps.setString(1, String.valueOf(article.getLike() - 1));
+            ps.setString(2, id);
             ps.execute();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -195,12 +198,12 @@ public class ArticleDaoImp implements ArticleDao {
         PreparedStatement ps1;
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1,String.valueOf(1+article.getCollect()));
-            ps.setString(2,id);
+            ps.setString(1, String.valueOf(1 + article.getCollect()));
+            ps.setString(2, id);
             ps.execute();
             ps1 = con.prepareStatement(sql1);
-            ps1.setString(1,id);
-            ps1.setString(2,user_id);
+            ps1.setString(1, id);
+            ps1.setString(2, user_id);
             ps1.execute();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -208,7 +211,7 @@ public class ArticleDaoImp implements ArticleDao {
     }
 
     @Override
-    public void cancelCollect(String id,String user_id) {
+    public void cancelCollect(String id, String user_id) {
         Article article = getArticle(id);
         String sql = "update article set idx_collect=? where pk_id=?";
         String sql1 = "delete from collect where idx_user_id = ? and idx_collect = ?;";
@@ -216,12 +219,12 @@ public class ArticleDaoImp implements ArticleDao {
         PreparedStatement ps1;
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1,String.valueOf(article.getCollect()-1));
-            ps.setString(2,id);
+            ps.setString(1, String.valueOf(article.getCollect() - 1));
+            ps.setString(2, id);
             ps.execute();
             ps1 = con.prepareStatement(sql1);
-            ps1.setString(1,user_id);
-            ps1.setString(2,id);
+            ps1.setString(1, user_id);
+            ps1.setString(2, id);
             ps1.execute();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -235,9 +238,9 @@ public class ArticleDaoImp implements ArticleDao {
         List<String> collects = new ArrayList<>();
         try {
             ps = con.prepareStatement(sql1);
-            ps.setString(1,id);
+            ps.setString(1, id);
             ResultSet rs = ps.executeQuery();
-            while (rs.next()){
+            while (rs.next()) {
                 collects.add(rs.getString("idx_collect"));
             }
             return collects;
@@ -254,10 +257,10 @@ public class ArticleDaoImp implements ArticleDao {
         try {
             ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
-            while (rs.next()){
-                return  rs.getString("pk_id");
+            while (rs.next()) {
+                return rs.getString("pk_id");
             }
-        }catch (SQLException throwables) {
+        } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
         return null;
@@ -270,12 +273,12 @@ public class ArticleDaoImp implements ArticleDao {
         PreparedStatement ps = null;
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(2,article.getTitle());
-            ps.setString(3,article.getContent());
-            ps.setString(1,article.getTag());
-            ps.setString(6,String.valueOf(article.getId()));
-            ps.setString(5,article.getSort());
-            ps.setString(4,String.valueOf(article.isOriginal()));
+            ps.setString(2, article.getTitle());
+            ps.setString(3, article.getContent());
+            ps.setString(1, article.getTag());
+            ps.setString(6, String.valueOf(article.getId()));
+            ps.setString(5, article.getSort());
+            ps.setString(4, String.valueOf(article.isOriginal()));
             boolean f = ps.execute();
             return f;
         } catch (SQLException throwables) {
@@ -290,7 +293,7 @@ public class ArticleDaoImp implements ArticleDao {
         PreparedStatement ps = null;
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1,id);
+            ps.setString(1, id);
             ps.execute();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -299,13 +302,13 @@ public class ArticleDaoImp implements ArticleDao {
 
     @Override
     public List<Article> getAllArticle() {
-        String  sql = "select * from article";
+        String sql = "select * from article";
         PreparedStatement ps = null;
         try {
             ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             List<Article> list = new ArrayList<>();
-            while(rs.next()){
+            while (rs.next()) {
                 Article article = new Article();
                 article.setTime(rs.getString("idx_time"));
                 article.setTitle(rs.getString("idx_title"));
@@ -328,14 +331,14 @@ public class ArticleDaoImp implements ArticleDao {
     }
 
     @Override
-    public void sendComment(String vlu, String id,String articleId) {
+    public void sendComment(String vlu, String id, String articleId) {
         String sql = "insert into artclecomment (idx_article_id,idx_from_id,idx_comment)values(?,?,?)";
         PreparedStatement ps;
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1,articleId);
-            ps.setString(2,id);
-            ps.setString(3,vlu);
+            ps.setString(1, articleId);
+            ps.setString(2, id);
+            ps.setString(3, vlu);
             ps.execute();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -344,14 +347,14 @@ public class ArticleDaoImp implements ArticleDao {
 
     @Override
     public List<Comment> getComment(String id) {
-        String  sql = "select * from artclecomment where idx_article_id=?";
+        String sql = "select * from artclecomment where idx_article_id=?";
         PreparedStatement ps = null;
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1,id);
+            ps.setString(1, id);
             ResultSet rs = ps.executeQuery();
             List<Comment> list = new ArrayList<>();
-            while(rs.next()){
+            while (rs.next()) {
                 Comment comment = new Comment();
                 String userId = rs.getString("idx_from_id");
                 User user = UserService.getData(userId);
@@ -369,11 +372,11 @@ public class ArticleDaoImp implements ArticleDao {
     @Override
     public void concern(String id, String fan) {
         String sql = "insert into concern (idx_fan,idx_user)values(?,?)";
-        PreparedStatement ps ;
+        PreparedStatement ps;
         try {
-            ps =con.prepareStatement(sql);
-            ps.setString(1,fan);
-            ps.setString(2,id);
+            ps = con.prepareStatement(sql);
+            ps.setString(1, fan);
+            ps.setString(2, id);
             ps.execute();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -383,11 +386,11 @@ public class ArticleDaoImp implements ArticleDao {
     @Override
     public void cancleconcern(String userid, String fan) {
         String sql = "delete from concern where idx_fan=? and idx_user=?";
-        PreparedStatement ps ;
+        PreparedStatement ps;
         try {
-            ps =con.prepareStatement(sql);
-            ps.setString(1,fan);
-            ps.setString(2,userid);
+            ps = con.prepareStatement(sql);
+            ps.setString(1, fan);
+            ps.setString(2, userid);
             ps.execute();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -402,7 +405,7 @@ public class ArticleDaoImp implements ArticleDao {
             ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             List<Article> list = new ArrayList<>();
-            while (rs.next()){
+            while (rs.next()) {
                 Article article = new Article();
                 article.setTime(rs.getString("idx_time"));
                 article.setTitle(rs.getString("idx_title"));
@@ -425,15 +428,15 @@ public class ArticleDaoImp implements ArticleDao {
     }
 
     @Override
-    public List<Article> getActivePage(String author,String page, String count) {
-        String sql = "SELECT *  FROM article where idx_author=? LIMIT "+page+","+count+" ";
+    public List<Article> getActivePage(String author, String page, String count) {
+        String sql = "SELECT *  FROM article where idx_author=? LIMIT " + page + "," + count + " ";
         PreparedStatement ps;
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1,author);
+            ps.setString(1, author);
             ResultSet rs = ps.executeQuery();
             List<Article> list = new ArrayList<>();
-            while (rs.next()){
+            while (rs.next()) {
                 Article article = new Article();
                 article.setTime(rs.getString("idx_time"));
                 article.setTitle(rs.getString("idx_title"));
@@ -457,13 +460,13 @@ public class ArticleDaoImp implements ArticleDao {
 
     @Override
     public List<Article> getCheckArticles() {
-        String  sql = "select * from checkarticle";
+        String sql = "select * from checkarticle";
         PreparedStatement ps;
         try {
             ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             List<Article> list = new ArrayList<>();
-            while(rs.next()){
+            while (rs.next()) {
                 Article article = new Article();
                 article.setTime(rs.getString("idx_time"));
                 article.setTitle(rs.getString("idx_title"));
@@ -491,10 +494,10 @@ public class ArticleDaoImp implements ArticleDao {
         PreparedStatement ps;
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1,id);
+            ps.setString(1, id);
             ResultSet rs = ps.executeQuery();
             Article article = new Article();
-            while (rs.next()){
+            while (rs.next()) {
                 article.setTime(rs.getString("idx_time"));
                 article.setTitle(rs.getString("idx_title"));
                 article.setId(Integer.valueOf(rs.getString("pk_id")));
@@ -520,7 +523,7 @@ public class ArticleDaoImp implements ArticleDao {
         PreparedStatement ps = null;
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1,id);
+            ps.setString(1, id);
             ps.execute();
         } catch (SQLException throwables) {
             throwables.printStackTrace();

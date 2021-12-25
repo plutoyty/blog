@@ -124,6 +124,5 @@ public class JdbcUtil {
             System.out.println(res.getString("idx_name"));
             System.out.println();
         }
-        JdbcUtil.close(con,res,preparedStatement);
-    }
+        JdbcUtil.close(con,res,preparedStatement);    }
 }

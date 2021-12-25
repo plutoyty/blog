@@ -11,15 +11,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
-public class UserService  {
+public class UserService {
 
-    public static boolean forgot(HttpServletRequest req){
+    public static boolean forgot(HttpServletRequest req) {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
-        System.out.println(email+password);
+        System.out.println(email + password);
         UserDao dao = UserDaoImp.getInstance();
-        return dao.forgot(email,password);
+        return dao.forgot(email, password);
     }
+
     public static void login(HttpServletRequest req) {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
@@ -33,20 +34,21 @@ public class UserService  {
         session.setAttribute("user", user);
     }
 
-    public static boolean register( HttpServletRequest req){
+    public static boolean register(HttpServletRequest req) {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
-        System.out.println(email+password);
+        System.out.println(email + password);
         UserDao dao = UserDaoImp.getInstance();
-        return dao.register(email,password);
+        return dao.register(email, password);
     }
 
-    public static boolean exit(HttpServletRequest req){
+    public static boolean exit(HttpServletRequest req) {
         String email = req.getParameter("email");
         UserDao dao = UserDaoImp.getInstance();
         return dao.exit(email);
     }
-    public static boolean edData(HttpServletRequest req){
+
+    public static boolean edData(HttpServletRequest req) {
         User user = new User();
         user.setId(req.getParameter("id"));
         user.setHead(req.getParameter("head"));
@@ -57,9 +59,9 @@ public class UserService  {
         user.setName(req.getParameter("name"));
         user.setEmail(Static.user.getEmail());
         UserDao dao = UserDaoImp.getInstance();
-        System.out.println("edituser:"+user);
-        boolean f= dao.edData(user);
-        if(f){
+        System.out.println("edituser:" + user);
+        boolean f = dao.edData(user);
+        if (f) {
             Static.user = user;
             HttpSession session = req.getSession();
             session.setAttribute("user", user);
@@ -67,14 +69,15 @@ public class UserService  {
         return false;
     }
 
-    public static User getData(String id){
+    public static User getData(String id) {
         UserDao dao = UserDaoImp.getInstance();
-        User user = dao.getUser(id,id);
+        User user = dao.getUser(id, id);
         return user;
     }
 
     /**
      * 判断旧密码是否正确
+     *
      * @param oldPassword
      * @return
      */
@@ -85,20 +88,22 @@ public class UserService  {
 
     /**
      * 发送验证码
+     *
      * @param to
      * @return
      */
-    public static String sendCode(String to){
+    public static String sendCode(String to) {
         int code = (int) ((Math.random() * 9 + 1) * 100000);
         String code1 = String.valueOf(code);
         try {
-            SendEmail.sendMail(to,code1);
+            SendEmail.sendMail(to, code1);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return code1;
     }
-    public static User getUser(String email){
+
+    public static User getUser(String email) {
         UserDao dao = UserDaoImp.getInstance();
         User user = dao.getUser(email);
         return user;
@@ -107,14 +112,14 @@ public class UserService  {
 
     public static List<User> getActiveUser(String details) {
         UserDao dao = UserDaoImp.getInstance();
-        List<User> list =  dao.getActiveUser(details);
+        List<User> list = dao.getActiveUser(details);
         return list;
     }
+
     public static void deleteUser(String id) {
         UserDao dao = UserDaoImp.getInstance();
         dao.delete(id);
     }
-
 
 
     public static List<User> getAllUser() {
@@ -124,13 +129,11 @@ public class UserService  {
     }
 
 
-
     public static List<String> getFan(String id) {
         UserDao dao = UserDaoImp.getInstance();
         List<String> list = dao.getFan(id);
         return list;
     }
-
 
 
     public static List<String> getConcern(String id) {
@@ -140,12 +143,10 @@ public class UserService  {
     }
 
 
-
-    public static void changeHead(String path,String id) {
+    public static void changeHead(String path, String id) {
         UserDao dao = UserDaoImp.getInstance();
-        dao.changeHead(path,id);
+        dao.changeHead(path, id);
     }
-
 
 
     public static List<User> getAllChatUser(String id) {
@@ -153,19 +154,19 @@ public class UserService  {
         return dao.getAllChatUser(id);
     }
 
-    public static User getIdUser(String id){
+    public static User getIdUser(String id) {
         UserDao dao = UserDaoImp.getInstance();
         return dao.getIdUser(id);
     }
 
     public static void addChat(String id, String userid) {
         UserDao dao = UserDaoImp.getInstance();
-        dao.addChat(id,userid);
+        dao.addChat(id, userid);
     }
 
-    public static List<Message> getAllMessage(String send,String receive){
+    public static List<Message> getAllMessage(String send, String receive) {
         UserDao dao = UserDaoImp.getInstance();
-        return dao.getAllMessage(send,receive);
+        return dao.getAllMessage(send, receive);
     }
 
     public static void addMessage(Message message) {

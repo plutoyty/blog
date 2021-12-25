@@ -116,35 +116,35 @@
         // alert(page)
         console.log(page) //获取当前页码
         this.show()
-        $.getJSON("http://localhost:8080/bolg/articleServlet", "action=Paging&page=" + page + "&email=" +'${pageScope.user.email}', function (data) {
+        $.getJSON("http://localhost:8080/bolg/articleServlet", "action=Paging&page=" + page + "&email=" + '${pageScope.user.email}', function (data) {
             $(".blog-all").empty();
             // alert(data.article)
             $.each(data.article, function (index, item) {
-                var s = "<div class='blog-min' onclick='this'>"+
-                    "<input name='action' value='show-article' hidden='hidden'>"+
-                    "<input class='id' name='id' value="+item.id+" hidden='hidden'>"+
-                    "<div class='title'>"+
-                    "<input name='id' value='' hidden='hidden'>"+
-                    "<a class='blog-title'>"+item.title+"</a>"+ "</div>"+
-            "<div class='blog-content'>"+item.content+"</div>"+"<div class='flog-foot1'>"
+                var s = "<div class='blog-min' onclick='this'>" +
+                    "<input name='action' value='show-article' hidden='hidden'>" +
+                    "<input class='id' name='id' value=" + item.id + " hidden='hidden'>" +
+                    "<div class='title'>" +
+                    "<input name='id' value='' hidden='hidden'>" +
+                    "<a class='blog-title'>" + item.title + "</a>" + "</div>" +
+                    "<div class='blog-content'>" + item.content + "</div>" + "<div class='flog-foot1'>"
                 var w;
-                if(item.original==true){
-                    w = "<div class='blog-bool'>"+"原创"+"</div>";
+                if (item.original == true) {
+                    w = "<div class='blog-bool'>" + "原创" + "</div>";
 
-                }else{
-                    w = "<div class='blog-bool' style='color: #00d95a;background-color: #dbdcee;'>"+"转载"+"</div>";
+                } else {
+                    w = "<div class='blog-bool' style='color: #00d95a;background-color: #dbdcee;'>" + "转载" + "</div>";
                 }
-            var q = "<div class='blog-foot10'><img class='blog-footer' src='imags/comment.png'/>"+
-            "<span class='comment-text'>"+"0评论</span></div>"+
-            "<div class='blog-foot10'><img class='blog-footer' src='imags/read.png'/>"+
-            "<span class='comment-text'>"+item.read+"阅读</span></div>"+
-            "<div class='blog-foot10'><img class='blog-footer' src='imags/like.png'/>"+
-            "<span class='comment-text'>"+item.like+"点赞</span></div>"+
-            "</div>"+
-            "</div>"+
-            "<br>"
+                var q = "<div class='blog-foot10'><img class='blog-footer' src='imags/comment.png'/>" +
+                    "<span class='comment-text'>" + "0评论</span></div>" +
+                    "<div class='blog-foot10'><img class='blog-footer' src='imags/read.png'/>" +
+                    "<span class='comment-text'>" + item.read + "阅读</span></div>" +
+                    "<div class='blog-foot10'><img class='blog-footer' src='imags/like.png'/>" +
+                    "<span class='comment-text'>" + item.like + "点赞</span></div>" +
+                    "</div>" +
+                    "</div>" +
+                    "<br>"
                 // alert(s+w+q);
-                $(".blog-all").append(s+w+q);
+                $(".blog-all").append(s + w + q);
                 // $(".blog-look").on("click",function (){
                 //     var s = $(this).parent().parent().parent().parent().prev("#id").val()
                 //     window.location = ("articleServlet?action=show-article&id=" + s + "");
