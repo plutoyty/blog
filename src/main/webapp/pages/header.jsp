@@ -113,7 +113,7 @@
                        style="display: none; position:absolute;left:-9999999px;width:0;height:0;">
             </div>
             <a id="logo" href="index.jsp" title="@@title">
-                <img src="imags/logo1.png">
+                <img src="imags/logo.png">
             </a>
             <ul id="header-nav">
                 <li id="index-tab" class="nav-current" title="首页">

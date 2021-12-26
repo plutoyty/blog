@@ -67,7 +67,8 @@
                     class="form-control"
                     placeholder="密码"
                     name="password"
-                    required>
+                    required
+                    value="${cookie.password.value}">
             <span id="passwordError"></span>
             <br>
             <span id="msgError">${requestScope.msg}</span>

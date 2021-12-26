@@ -1,17 +1,18 @@
 body {
-    /*background-image: url("../imags/backgroud.png");*/
+    background-image: url("http://localhost:8080/bolg/imags/t1.jpg");
     /*background-repeat:no-repeat;*/
     /*background-size:100% 100%;*/
     /*background-attachment: fixed;"*/
     /*background-color: rgb(116, 80, 214);*/
-    background: no-repeat;
-    background: #fff3e7;
+    /*background: no-repeat;*/
+    /*background: #ffe7e7;*/
     /*opacity: 0.5%;*/
 }
 
 .container {
     border-radius: 25px;
-    background: #C0C0C0;
+    /*background: #e38f68;*/
+    background: rgba(227,143,104,0.8);
     padding: 20px;
     width: 400px;
     height: 450px;

@@ -166,6 +166,8 @@
 #logo img{
     /*border: black 1px solid;*/
     float: left;
+    width: 100px;
+    height: 60px;
 }
 
 #charge-tab{
